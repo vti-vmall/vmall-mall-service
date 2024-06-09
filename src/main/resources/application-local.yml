@@ -2,9 +2,9 @@ spring:
   application:
     name: vmall-mall-service
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASS}
+    url: jdbc:mysql://localhost:3306/vmall_mall
+    username: root
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
@@ -14,5 +14,4 @@ eureka:
   client:
     register-with-eureka: true
     service-url:
-      defaultZone: ${EUREKA_SERVER}
-
+      defaultZone: http://localhost:8761/eureka
