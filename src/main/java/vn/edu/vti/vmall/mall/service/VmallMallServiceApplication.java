@@ -1,4 +1,4 @@
-package vn.edu.vti.vmall.vmall_mall_service;
+package vn.edu.vti.vmall.mall.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
