@@ -1,4 +1,4 @@
-package vn.edu.vti.vmall.service.mall.controller;
+package vn.edu.vti.vmall.service.mall.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

@@ -76,6 +76,12 @@
       <version>1.0.0</version>
     </dependency>
     <!--    END VMALL COMMON-->
+<!--    FEIGN CLIENT-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+<!--    END FEIGN CLIENT-->
   </dependencies>
   <dependencyManagement>
     <dependencies>
