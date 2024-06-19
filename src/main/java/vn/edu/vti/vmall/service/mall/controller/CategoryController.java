@@ -1,7 +1,8 @@
-package vn.edu.vti.vmall.mall.service.controller;
+package vn.edu.vti.vmall.service.mall.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CategoryController {
   @GetMapping
   public ResponseEntity<String> getCategories(){
-    log.info("(getCategories)Getting all categories");
+    log.info("(getCategories)Getting all categories: [{}]", SecurityContextHolder.getContext().getAuthentication().getName());
     return ResponseEntity.ok("Categories");
   }
 }

@@ -1,18 +1,8 @@
 spring:
   application:
     name: vmall-mall-service
-  datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASS}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  config:
+    import: ${CONFIG_SERVER_URL:optional:configserver:http://localhost:6969}
 
 server:
-  port: 8081
-
-eureka:
-  client:
-    register-with-eureka: true
-    service-url:
-      defaultZone: ${EUREKA_SERVER}
-
+  port: 8082
