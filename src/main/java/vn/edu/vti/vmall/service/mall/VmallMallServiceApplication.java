@@ -1,6 +1,7 @@
 package vn.edu.vti.vmall.service.mall;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,15 +14,14 @@ import vn.edu.vti.vmall.service.mall.client.UserClient;
 @EnableSecurityCommon
 @EnableExceptionHandler
 @EnableFeignClients
-@RequiredArgsConstructor
+@Slf4j
 public class VmallMallServiceApplication implements CommandLineRunner {
-  private final UserClient userClient;
   public static void main(String[] args) {
     SpringApplication.run(VmallMallServiceApplication.class, args);
   }
 
   @Override
   public void run(String... args) throws Exception {
-    var response = userClient.getUserInfoByUsername("tunk");
+
   }
 }

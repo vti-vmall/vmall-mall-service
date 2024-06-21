@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import vn.edu.vti.vmall.api.common.payload.service.user.response.UserInfoResponse;
 import vn.edu.vti.vmall.api.common.response.ApiResponse;
+import vn.edu.vti.vmall.service.mall.client.config.FeignConfig;
 
-@FeignClient(name = "VMALL-USER-MANAGER")
+@FeignClient(name = "VMALL-USER-MANAGER", configuration = FeignConfig.class)
 public interface UserClient {
   @GetMapping("/api/v1/internal/users/{username}")
   ResponseEntity<ApiResponse<UserInfoResponse>> getUserInfoByUsername(
