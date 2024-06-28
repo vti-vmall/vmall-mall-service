@@ -17,10 +17,10 @@ import vn.edu.vti.vmall.service.mall.service.UserService;
 public class UserServiceImpl implements UserService {
   private final UserClient userClient;
   @Override
-//  @CircuitBreaker(
-//      name = "UserServiceImpl_getUserInfoByUsername",
-//      fallbackMethod = "fallback"
-//  )
+  @CircuitBreaker(
+      name = "UserServiceImpl_getUserInfoByUsername",
+      fallbackMethod = "fallback"
+  )
   public UserInfoResponse getUserInfoByUsername(String username) {
     ResponseEntity<ApiResponse<UserInfoResponse>> userInfoResponse = userClient.getUserInfoByUsername(username);
     ApiResponse<UserInfoResponse> response = userInfoResponse.getBody();
